@@ -11,3 +11,28 @@ a:active {
   text-decoration: none;
   color: inherit;
 }
+
+.header-container {
+  grid-area: header;
+}
+
+.home-page-container {
+  grid-area: main-content;
+}
+
+.footer-container {
+  grid-area: footer;
+}
+
+.app-container {
+  display: grid;
+  min-height: 100vh;
+  height: auto;
+  width: 100%;
+  grid-template-areas:
+    "header"
+    "main-content"
+    "footer";
+  grid-template-rows: 3.5rem 96% 4rem;
+  grid-template-columns: 100%;
+}
