@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import GeneralContext from ".";
 // Utilities
 import apiCall from "../../api/apiCall";
+import endpoint from "../../dummyData/fotos.json";
 
 const GeneralContextProvider = ({ children }) => {
   const [test, setTest] = useState(true);
@@ -16,20 +17,8 @@ const GeneralContextProvider = ({ children }) => {
     }
   };
 
-  const guitarra = {
-    brand: "Fender",
-    model: "Stratocaster",
-    year: "2016",
-    price: "1000000",
-    strings: 6,
-  };
-
-  const example = (text) => {
-    return new Map(Object.entries(guitarra));
-  };
-
   useEffect(() => {
-    console.log(example());
+    console.log("aer", endpoint);
     //console.log(
     //  "Una buen ejemplo para traer data desde una Api al momento de cargar la app, es usar el useEffect acá"
     //);
