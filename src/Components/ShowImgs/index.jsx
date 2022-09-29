@@ -1,17 +1,10 @@
-import { useContext } from "react";
 // Style
 import { Card } from "antd";
 import { FaHeart, FaRegHeart } from "react-icons/fa";
-// Context
-import GeneralContext from "../../../Context/GeneralContext";
 // App
-const ShowImgs = () => {
-  const { Meta } = Card;
-  const { dummyData } = useContext(GeneralContext);
-
+const ShowImgs = ({ dataToDeploy }) => {
   const deployImages = (data) => {
     const photos = data.photos.map((results) => {
-      console.log(results);
       return (
         <Card
           key={results.id}
@@ -41,7 +34,7 @@ const ShowImgs = () => {
     return photos;
   };
 
-  return <div className="card-content-container">{deployImages(dummyData)}</div>;
+  return <div className="card-content-container">{deployImages(dataToDeploy)}</div>;
 };
 
 export default ShowImgs;
