@@ -14,6 +14,11 @@ a:active {
 
 .header-container {
   grid-area: header;
+  background-color: #43a047;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .home-page-container {
