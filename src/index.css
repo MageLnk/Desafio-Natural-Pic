@@ -25,6 +25,14 @@ a:active {
   grid-area: main-content;
 }
 
+.error-404-container {
+  grid-area: main-content;
+  display: flex;
+  justify-content: center;
+  padding: 3rem 0 0 0;
+  font-size: 2em;
+}
+
 .footer-container {
   grid-area: footer;
   background-color: black;
