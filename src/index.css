@@ -31,6 +31,24 @@ a:active {
   justify-content: center;
 }
 
+.card-content-container {
+  display: grid;
+  justify-content: space-between;
+  margin: 2rem;
+  grid-template-columns: repeat(3, auto);
+  grid-auto-rows: 21rem;
+  gap: 1rem;
+}
+.card-content-container .ant-card-body {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0;
+  margin: 0.5rem 0 0 0;
+}
+.card-heart {
+  cursor: pointer;
+}
+
 .error-404-container {
   grid-area: main-content;
   display: flex;

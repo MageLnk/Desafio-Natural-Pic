@@ -2,29 +2,20 @@ import { useEffect, useState } from "react";
 // Context
 import GeneralContext from ".";
 // Utilities
-import apiCall from "../../api/apiCall";
-import endpoint from "../../dummyData/fotos.json";
+//import apiCall from "../../api/apiCall";
+import dummyData from "../../dummyData/fotos.json";
 
 const GeneralContextProvider = ({ children }) => {
-  const [test, setTest] = useState(true);
+  //const exampleUseApiCall = async (userId) => {
+  //  try {
+  //    const data = await apiCall({ url: `http://insertApiAddress` });
+  //    // Insert setData(data)
+  //  } catch (e) {
+  //    alert("Un error ha ocurrido. Por favor actualice la página");
+  //  }
+  //};
 
-  const exampleUseApiCall = async (userId) => {
-    try {
-      const data = await apiCall({ url: `http://insertApiAddress` });
-      // Insert setData(data)
-    } catch (e) {
-      alert("Un error ha ocurrido. Por favor actualice la página");
-    }
-  };
-
-  useEffect(() => {
-    console.log("aer", endpoint);
-    //console.log(
-    //  "Una buen ejemplo para traer data desde una Api al momento de cargar la app, es usar el useEffect acá"
-    //);
-  }, []);
-
-  return <GeneralContext.Provider value={{ test, setTest }}>{children}</GeneralContext.Provider>;
+  return <GeneralContext.Provider value={{ dummyData }}>{children}</GeneralContext.Provider>;
 };
 
 export default GeneralContextProvider;
