@@ -31,6 +31,16 @@ a:active {
   justify-content: center;
 }
 
+.favorite-page-container {
+  grid-area: main-content;
+}
+.favorite-page-container .favorite-content-title {
+  margin: 1rem;
+  color: #43a047;
+  display: flex;
+  justify-content: center;
+}
+
 .card-content-container {
   display: grid;
   justify-content: space-between;

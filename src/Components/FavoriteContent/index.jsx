@@ -4,7 +4,7 @@ import GeneralContext from "../../Context/GeneralContext";
 // Components
 import ShowImgs from "../ShowImgs";
 // App
-const HomeContent = () => {
+const FavoriteContent = () => {
   const { data } = useContext(GeneralContext);
   return (
     <div className="home-content-container">
@@ -14,4 +14,4 @@ const HomeContent = () => {
   );
 };
 
-export default HomeContent;
+export default FavoriteContent;

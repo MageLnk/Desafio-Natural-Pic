@@ -1,10 +1,21 @@
+import { useContext } from "react";
+// Context
+import GeneralContext from "../../Context/GeneralContext";
 // Style
 import { Card } from "antd";
 import { FaHeart, FaRegHeart } from "react-icons/fa";
 // App
 const ShowImgs = ({ dataToDeploy }) => {
+  const { handleLike } = useContext(GeneralContext);
   const deployImages = (data) => {
-    const photos = data.photos.map((results) => {
+    if (!data) {
+      return (
+        <div>
+          <span>Loading...</span>
+        </div>
+      );
+    }
+    const photos = data.map((results) => {
       return (
         <Card
           key={results.id}
@@ -24,9 +35,9 @@ const ShowImgs = ({ dataToDeploy }) => {
           }
         >
           {results.liked === true ? (
-            <FaHeart className="card-heart" />
+            <FaHeart className="card-heart" onClick={() => handleLike(results.id)} />
           ) : (
-            <FaRegHeart className="card-heart" />
+            <FaRegHeart className="card-heart" onClick={() => handleLike(results.id)} />
           )}
         </Card>
       );
@@ -38,5 +49,3 @@ const ShowImgs = ({ dataToDeploy }) => {
 };
 
 export default ShowImgs;
-
-//photos[0].src.original
