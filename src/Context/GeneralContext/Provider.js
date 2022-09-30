@@ -15,7 +15,7 @@ const GeneralContextProvider = ({ children }) => {
       }
       setData([...newData]);
     });
-    // Cuál es la mejor manera de poner esto? Digo, para que el findPicture no quede "oscuro"
+    // Cuál es la mejor manera de poner esto? Digo, para que el findPicture no quede
   };
 
   useEffect(() => {

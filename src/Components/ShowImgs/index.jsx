@@ -2,7 +2,7 @@ import { useContext } from "react";
 // Context
 import GeneralContext from "../../Context/GeneralContext";
 // Style
-import { Card } from "antd";
+import { Card, Image } from "antd";
 import { FaHeart, FaRegHeart } from "react-icons/fa";
 // App
 const ShowImgs = ({ dataToDeploy }) => {
@@ -24,7 +24,7 @@ const ShowImgs = ({ dataToDeploy }) => {
             height: 300,
           }}
           cover={
-            <img
+            <Image
               style={{
                 width: 350,
                 height: 300,

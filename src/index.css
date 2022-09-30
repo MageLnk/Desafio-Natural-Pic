@@ -24,7 +24,8 @@ a:active {
 .home-page-container {
   grid-area: main-content;
 }
-.home-page-container .home-content-title {
+
+.home-content-title {
   margin: 1rem;
   color: #43a047;
   display: flex;
